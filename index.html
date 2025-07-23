@@ -1,32 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website - Easy Tutorialsd </title>
-    <link rel ="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Personal Portfolio - Amar Deep Singh</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://kit.fontawesome.com/0763a4a3d7.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+<!-- Header Section -->
 <div id="header">
     <div class="container">
         <nav>
-            <img src="images/kmn.jpg" class=" logo">
-             <ul>
+            <!-- <img src="images/2ndlogo" class="logo"> -->
+            <b>DevOps<br>Engineer</b>
+            <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact</a></li>
-             </ul>
+            </ul>
         </nav>
         <div class="header-text">
-            <p>DevOps SRE<br>Cloud/Platform Engineer </p>
-            <h1>Hi , I'm <span>Amar Deep Singh</span><br> from India </h1>
+            <p><strong><span>DevOps SRE<br>Cloud/Platform Engineer</span></strong></p>
+            <h1><span>Hi, I'm Amar Deep Singh</span></h1>
+            <h3><span>from <b>India</b></span></h3>
         </div>
     </div>
-
 </div>
 
+<!-- About Section -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/background.jpg" alt="About Image"/>
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    B.Tech Graduate in Computer Science Engineering student from Rayat Bahara University, passionate about DevOps, Cloud Engineering, and all things tech.
+                    <br>Hailing from Srinagar, J&K, I bring a creative edge to engineering through my involvement in technical, cultural, and literary activities.
+                    <br>From leading teams and organizing events to contributing to Literature Geeks and IIMUN, I thrive at the intersection of technology, communication, and collaboration.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>DevOps:</span><br>CI/CD, Git, Docker, Kubernetes, AWS, Azure, GCP, Jenkins, GitHub Actions</li>
+                        <li><span>Programming Languages:</span><br>Python, Java, C++, HTML, CSS</li>
+                        <li><span>Database:</span><br>SQL, MongoDB</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>Internships & Projects:</span><br>Worked on CI/CD pipelines, container orchestration using Kubernetes, and cloud automation scripts.</li>
+                        <li><span>Open Source:</span><br>Contributed to DevOps community GitHub repositories.</li>
+                        <li><span>Leadership:</span><br>Team Lead at Various Campus Events, event organizer, Literature Geeks contributor.</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>B.Tech in Computer Science</span><br><b>UG:</b><br> Rayat Bahara University, Punjab<br> <b>Hr.Sec:</b> <br> Burn Hall School , Srinagar<br><b>High School:</b> <br> Burn Hall School , Srinagar</li>
+                        <li><span>Certifications:</span><br>Advance Java , Python Programming, Data Analysis</li>
+                        <li><span>Workshops:</span><br>Attended bootcamps on Devops/Cloud, Mern Stack and DSA</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------------------------------------------------------------------Services----------------------------------------------------------------------------------->
+
+
+<div class="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            
+            <div> 
+                <i class="fa-solid fa-cloud"></i>
+                <h2>CI/CD & Automation</h2>
+                <p><strong>CI/CD & Automation:</strong> Automating the software development lifecycle for faster, reliable releases.</p>
+                <p>- <strong>Continuous Integration (CI):</strong> Auto-merge and test code using Jenkins, GitHub Actions.</p>
+                <p>- <strong>Continuous Deployment (CD):</strong> Auto-release code to production environments.</p>
+                <p>- <strong>Testing Automation:</strong> Unit, integration, and load testing in pipelines.</p>
+                <p>- <strong>Build Tools:</strong> Using tools like Maven, Gradle, and Docker for efficient build processes.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <div> 
+                <i class="fa-solid fa-box-open"></i>
+                <h2>Infrastructure <br>Management</h2>
+                <p><strong>Infras Management:</strong> Managing scalable, efficient, and repeatable infrastructure.</p>
+                <p>- <strong>Infrastructure as Code (IaC):</strong> Tools like Terraform, Ansible, and CloudFormation.</p>
+                <p>- <strong>Cloud Platforms:</strong> AWS, Azure, and GCP for scalable cloud environments.</p>
+                <p>- <strong>Containerization:</strong> Using Docker to package applications into portable units.</p>
+                <p>- <strong>Orchestration:</strong> Using Kubernetes for deployment, scaling, and service management.</p>
+                <p>- <strong>Configuration Management:</strong> Ensuring consistency using Ansible, Puppet, or Chef.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+            <div> 
+                <i class="fa-solid fa-shield-alt"></i>
+                <h2>Monitoring & Security</h2>
+                <p><strong>Monitoring & Security:</strong> Ensuring system stability, visibility, and secure operations.</p>
+                <p>- <strong>Monitoring Tools:</strong> Prometheus, Grafana, and CloudWatch for performance insights.</p>
+                <p>- <strong>Logging Systems:</strong> ELK Stack (Elasticsearch, Logstash, Kibana) for log analysis.</p>
+                <p>- <strong>Alerting:</strong> Real-time alerts via tools like Slack, PagerDuty, etc.</p>
+                <p>- <strong>Security in Pipelines:</strong> Integrating vulnerability scanning and compliance checks.</p>
+                <p>- <strong>Secrets Management:</strong> Secure credential storage using Vault or AWS Secrets Manager.</p>
+                <a href="#">Learn more</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (let tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (let tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        document.getElementById(tabname).classList.add("active-tab");
+        event.currentTarget.classList.add("active-link");
+    }
+</script>
 
 </body>
 </html>
