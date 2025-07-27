@@ -159,8 +159,32 @@
         <a href="#" class="btn">See More</a>
     </div>
 </div>
-
-
+<!------------------------------------------------------------------Contact---------------------------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>deepamar9340@gmail.com</p>
+                <p><i class="fa-solid fa-mobile-screen"></i>+91 9596299845 / 9419189340</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/amar-deep-singh-414919267/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://x.com/Kalamkar9340"><i class="fa-brands fa-x-twitter"></i></a>
+                  <!---- <a href=""><i class="fa-brands fa-snapchat"></i></i></a> ---->
+                </div>
+                <a href="images/resume.png" download class="btn btn2 ">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name "placeholder="Your Name" required>
+                    <input type="email" name=placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="bn btn2">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
@@ -175,7 +199,8 @@
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname) {
+    function opentab(tabname) 
+    {
         for (let tablink of tablinks) {
             tablink.classList.remove("active-link");
         }
