@@ -6,6 +6,8 @@
     <title>Personal Portfolio - Amar Deep Singh</title>
     <link rel="stylesheet" href="style.css"/>
     <script src="https://kit.fontawesome.com/0763a4a3d7.js" crossorigin="anonymous"></script>
+    <meta name="description" content="Amar Deep Singh - DevOps and Cloud Engineer Portfolio">
+    <meta name="keywords" content="DevOps, Portfolio, Cloud, Engineer, Kubernetes, CI/CD, Amar Deep Singh">
 </head>
 <body>
 
@@ -13,14 +15,16 @@
 <div id="header">
     <div class="container">
         <nav>
-            <!-- <img src="images/2ndlogo" class="logo"> -->
             <b>DevOps<br>Engineer</b>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="header-text">
@@ -36,20 +40,20 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/background.jpg" alt="About Image"/>
+                <img src="images/background.jpg" alt="Amar Deep Singh Portrait" />
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
                 <p>
-                    B.Tech Graduate in Computer Science Engineering student from Rayat Bahara University, passionate about DevOps, Cloud Engineering, and all things tech.
+                    B.Tech Graduate in Computer Science Engineering from Rayat Bahara University, passionate about DevOps, Cloud Engineering, and all things tech.
                     <br>Hailing from Srinagar, J&K, I bring a creative edge to engineering through my involvement in technical, cultural, and literary activities.
                     <br>From leading teams and organizing events to contributing to Literature Geeks and IIMUN, I thrive at the intersection of technology, communication, and collaboration.
                 </p>
 
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    <p class="tab-links active-link" onclick="opentab('Skills', event)">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experience', event)">Experience</p>
+                    <p class="tab-links" onclick="opentab('Education', event)">Education</p>
                 </div>
 
                 <div class="tab-contents active-tab" id="Skills">
@@ -70,137 +74,123 @@
 
                 <div class="tab-contents" id="Education">
                     <ul>
-                        <li><span>B.Tech in Computer Science</span><br><b>UG:</b><br> Rayat Bahara University, Punjab<br> <b>Hr.Sec:</b> <br> Burn Hall School , Srinagar<br><b>High School:</b> <br> Burn Hall School , Srinagar</li>
-                        <li><span>Certifications:</span><br>Advance Java , Python Programming, Data Analysis</li>
-                        <li><span>Workshops:</span><br>Attended bootcamps on Devops/Cloud, Mern Stack and DSA</li>
+                        <li><span>B.Tech in Computer Science</span><br><b>UG:</b> Rayat Bahara University, Punjab<br><b>Hr.Sec:</b> Burn Hall School, Srinagar<br><b>High School:</b> Burn Hall School, Srinagar</li>
+                        <li><span>Certifications:</span><br>Advanced Java, Python Programming, Data Analysis</li>
+                        <li><span>Workshops:</span><br>Attended bootcamps on DevOps/Cloud, MERN Stack and DSA</li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </div>
 </div>
-<!----------------------------------------------------------------------------Services----------------------------------------------------------------------------------->
 
-
-<div class="services">
+<!-- Services Section -->
+<div id="services" class="services">
     <div class="container">
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
-            
-            <div> 
+            <div>
                 <i class="fa-solid fa-cloud"></i>
                 <h2>CI/CD & Automation</h2>
                 <p><strong>CI/CD & Automation:</strong> Automating the software development lifecycle for faster, reliable releases.</p>
-                <p>- <strong>Continuous Integration (CI):</strong> Auto-merge and test code using Jenkins, GitHub Actions.</p>
-                <p>- <strong>Continuous Deployment (CD):</strong> Auto-release code to production environments.</p>
-                <p>- <strong>Testing Automation:</strong> Unit, integration, and load testing in pipelines.</p>
-                <p>- <strong>Build Tools:</strong> Using tools like Maven, Gradle, and Docker for efficient build processes.</p>
+                <p>- <strong>Continuous Integration:</strong> Jenkins, GitHub Actions</p>
+                <p>- <strong>Deployment:</strong> Automated production rollouts</p>
+                <p>- <strong>Testing:</strong> Unit, integration & load testing</p>
                 <a href="#">Learn more</a>
             </div>
-
-            <div> 
+            <div>
                 <i class="fa-solid fa-box-open"></i>
                 <h2>Infrastructure <br>Management</h2>
-                <p><strong>Infras Management:</strong> Managing scalable, efficient, and repeatable infrastructure.</p>
-                <p>- <strong>Infrastructure as Code (IaC):</strong> Tools like Terraform, Ansible, and CloudFormation.</p>
-                <p>- <strong>Cloud Platforms:</strong> AWS, Azure, and GCP for scalable cloud environments.</p>
-                <p>- <strong>Containerization:</strong> Using Docker to package applications into portable units.</p>
-                <p>- <strong>Orchestration:</strong> Using Kubernetes for deployment, scaling, and service management.</p>
-                <p>- <strong>Configuration Management:</strong> Ensuring consistency using Ansible, Puppet, or Chef.</p>
+                <p><strong>Infra Management:</strong> Scalable, repeatable infrastructure</p>
+                <p>- <strong>IAC:</strong> Terraform, Ansible, CloudFormation</p>
+                <p>- <strong>Cloud:</strong> AWS, Azure, GCP</p>
+                <p>- <strong>Kubernetes & Docker</strong></p>
                 <a href="#">Learn more</a>
             </div>
-
-            <div> 
+            <div>
                 <i class="fa-solid fa-shield-alt"></i>
                 <h2>Monitoring & Security</h2>
-                <p><strong>Monitoring & Security:</strong> Ensuring system stability, visibility, and secure operations.</p>
-                <p>- <strong>Monitoring Tools:</strong> Prometheus, Grafana, and CloudWatch for performance insights.</p>
-                <p>- <strong>Logging Systems:</strong> ELK Stack (Elasticsearch, Logstash, Kibana) for log analysis.</p>
-                <p>- <strong>Alerting:</strong> Real-time alerts via tools like Slack, PagerDuty, etc.</p>
-                <p>- <strong>Security in Pipelines:</strong> Integrating vulnerability scanning and compliance checks.</p>
-                <p>- <strong>Secrets Management:</strong> Secure credential storage using Vault or AWS Secrets Manager.</p>
+                <p>- <strong>Monitoring:</strong> Prometheus, Grafana, CloudWatch</p>
+                <p>- <strong>Logging:</strong> ELK Stack</p>
+                <p>- <strong>Security:</strong> Pipeline scanning, secrets management</p>
                 <a href="#">Learn more</a>
             </div>
-
         </div>
     </div>
 </div>
-<!----------------------------------------------------------------------------Portfolio----------------------------------------------------------------------------------->
+
+<!-- Portfolio Section -->
 <div id="portfolio">
     <div class="container">
-        <h1 class ="sub-title">My Work</h1>
+        <h1 class="sub-title">My Work</h1>
         <div class="work_list">
             <div class="work">
-                <img src="images/work-1.png">
+                <img src="images/work-1.png" alt="Social Media Design 1">
                 <div class="LAYER">
                     <h3>Social Media</h3>
-                    <p>Let Connect socially</p>
-                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <p>Let’s connect socially.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
-                <img src="images/work-2.png">
-                  <div class="LAYER">
-                    <h3>Social Media</h3>
-                    <p>Listen to what bring you <br> peace</p>
-                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                <img src="images/work-2.png" alt="Peaceful Listening Design">
+                <div class="LAYER">
+                    <h3>Peaceful Listening</h3>
+                    <p>Listen to what brings you peace.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
-                <img src="images/work-3.png">
-                  <div class="LAYER">
+                <img src="images/work-3.png" alt="Drip Loot Project">
+                <div class="LAYER">
                     <h3>Drip Loot</h3>
-                    <p>let connect socially</p>
-                    <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    <p>Explore fashion & merch.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
         </div>
         <a href="#" class="btn">See More</a>
     </div>
 </div>
-<!------------------------------------------------------------------Contact---------------------------------------------->
+
+<!-- Contact Section -->
 <div id="contact">
     <div class="container">
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i>deepamar9340@gmail.com</p>
-                <p><i class="fa-solid fa-mobile-screen"></i>+91 9596299845 / 9419189340</p>
+                <p><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> <a href="mailto:deepamar9340@gmail.com">deepamar9340@gmail.com</a></p>
+                <p><i class="fa-solid fa-mobile-screen" aria-hidden="true"></i> <a href="tel:+919596299845">+91 9596299845</a></p>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/amar-deep-singh-414919267/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://x.com/Kalamkar9340"><i class="fa-brands fa-x-twitter"></i></a>
-                  <!---- <a href=""><i class="fa-brands fa-snapchat"></i></i></a> ---->
+                    <a href="https://www.linkedin.com/in/amar-deep-singh-414919267/" target="_blank"><i class="fa-brands fa-linkedin" aria-label="LinkedIn"></i></a>
+                    <a href="https://x.com/Kalamkar9340" target="_blank"><i class="fa-brands fa-x-twitter" aria-label="Twitter"></i></a>
                 </div>
-                <a href="images/resume.png" download class="btn btn2 ">Download Resume</a>
+                <a href="images/resume.png" download class="btn btn2">Download Resume</a>
             </div>
             <div class="contact-right">
-                <form>
-                    <input type="text" name="Name "placeholder="Your Name" required>
-                    <input type="email" name=placeholder="Your Email" required>
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="bn btn2">submit</button>
+                    <button type="submit" class="btn btn2">Submit</button>
                 </form>
+                <span id="Message" ></span> 
             </div>
         </div>
     </div>
 </div>
 
+<!-- Footer -->
+<footer style="text-align:center; padding: 20px; background-color:#111; color:#aaa;">
+    © 2025 Amar Deep Singh. All rights reserved.
+</footer>
 
-
-
-
-
-
-
-
-
+<!-- Scripts -->
 <script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+    const tablinks = document.getElementsByClassName("tab-links");
+    const tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname) 
-    {
+    function opentab(tabname, event) {
         for (let tablink of tablinks) {
             tablink.classList.remove("active-link");
         }
@@ -210,6 +200,31 @@
         document.getElementById(tabname).classList.add("active-tab");
         event.currentTarget.classList.add("active-link");
     }
+
+    function toggleMenu() {
+        document.querySelector("nav ul").classList.toggle("active");
+    }
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwJh-Z5xapMDxzsxKAOQAVBg5bChYw_t2voLto6t8u8F41uDPXeRT08WV2tJq_evHoFZQ/exec';
+    const form = document.forms['submit-to-google-sheet'];
+    const Message = document.getElementById('Message');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => 
+            {
+                (Message.innerHTML= "Message submitted successfully!")
+                setTimeout(function(){
+                    Message.innerHTML = " ";
+                },5000)
+                form.reset()
+
+            })
+            .catch(error => alert("Something went wrong. Please try again."));
+    });
 </script>
 
 </body>

@@ -1,51 +1,58 @@
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background: #000;
     color: #fff;
 }
+
+h1 { font-size: 48px; }
+h2 { font-size: 36px; }
+h3 { font-size: 28px; }
+
+/* Header */
 #header {
     width: 100%;
-    height: 100vh; /* Corrected from 'hv' to 'vh' */
+    height: 100vh;
     background-image: url(images/mainbbg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 90% center; /* Slightly left from the absolute right */
-
-    
-   /*ackground-position: right center; /* Moves image to the right-most side */
+    background-position: 90% center;
 }
 
 .container {
     padding: 10px 10%;
 }
 
-nav{
-    display:  flex;
+nav {
+    display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.logo{
-    width: 140px;
-}
-nav ul li{
+
+nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
     position: relative;
 }
 
-nav ul li a{
+nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px ;
+    font-size: 18px;
 }
-nav ul li a::after{
+
+nav ul li a::after {
     content: '';
     width: 0%;
     height: 3px;
@@ -55,80 +62,73 @@ nav ul li a::after{
     bottom: -6px;
     transition: 0.5s;
 }
-nav ul li a:hover::after{
-    width: 100%;
 
+nav ul li a:hover::after {
+    width: 100%;
 }
-.header-text{
+
+.header-text {
     margin-top: 20%;
     font-size: 30px;
 }
-.header-text h1{
+
+.header-text h1 {
     font-size: 60px;
     margin-top: 20px;
 }
-.header-text p span{
+
+.header-text span {
+    color: #ff004f;
+}
+
+.header-text p span {
     color: #a80d3e;
-
-}
-.header-text h1 span{
-    color: #ff004f;
-}
-.header-text h2 span
-{
-    color: #ff004f;
-}
-.header-text h3 span    
-{
-    color: #ff004f;
-}
-h2 {
-  font-size: 80px; /* or 3rem, or any size you want */
 }
 
-h3 {
-  font-size: 49px;
-}
-/*---------------------------------------------------------------------about` section---------------------------------------------------------------------------------*/
-#about{
+/* About */
+#about {
     padding: 80px 0;
-    color : #ababab;
+    color: #ababab;
 }
-.row{
+
+.row {
     display: flex;
-   /* align-items: center;*/
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.about-col-1
-{
+
+.about-col-1 {
     flex-basis: 35%;
-} 
-.about-col-1 img{
+}
+
+.about-col-1 img {
     width: 110%;
     border-radius: 30px;
 }
-.about-col-2{
+
+.about-col-2 {
     flex-basis: 60%;
 }
+
 .sub-title {
     font-size: 60px;
-    color: #ffff;
+    color: #fff;
     font-weight: 600;
 }
-.tab-titles{
+
+.tab-titles {
     display: flex;
     margin: 20px 0 40px;
-
 }
-.tab-links{
+
+.tab-links {
     margin-right: 50px;
     font-weight: 500;
-    /*color: #ff004f;*/
     cursor: pointer;
     position: relative;
 }
-.tab-links:after{
+
+.tab-links::after {
     content: '';
     width: 0%;
     height: 3px;
@@ -138,54 +138,41 @@ h3 {
     bottom: -8px;
     transition: 0.5s;
 }
-.tab-links.active-link:hover::after{
-    width: 50%;
 
+.tab-links.active-link::after {
+    width: 50%;
 }
-.tab-contents ul li{
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+.tab-contents ul li {
     list-style: none;
     margin: 10px 0;
-
 }
-.tab-contents ul li span{
+
+.tab-contents ul li span {
     color: #b54769;
     font-size: 14px;
 }
-.tab-contents{
-    display: none;
-}
-.tab-contents.active-tab{
-    display: block;
 
-}
-/*---------------------services------------------*/
-#services{
+/* Services */
+#services {
     padding: 30px 0;
 }
-.services-list{
+
+.services-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+    gap: 40px;
     margin-top: 50px;
 }
 
-
-
-
-/*---------------------                                           manage size of heading tag<h>               ------------------*/
-h1 {
-    font-size: 48px;
-}
-
-h2 {
-    font-size: 36px;
-}
-
-h3 {
-    font-size: 28px;
-}
-
-/*-------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .services-list div {
     background: #262626;
     padding: 40px;
@@ -214,12 +201,12 @@ h3 {
     display: inline-block;
 }
 
-/* ✅ Corrected hover selector */
 .services-list div:hover {
     background: #ff004f;
     transform: translateY(-10px);
 }
-/*---------------------- portfolio-------------------------------------*/ 
+
+/* Portfolio */
 #portfolio {
     padding: 80px 0;
     color: #ababab;
@@ -228,7 +215,7 @@ h3 {
 .work_list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+    gap: 40px;
     margin-top: 50px;
 }
 
@@ -260,7 +247,7 @@ h3 {
     padding: 0 40px;
     text-align: center;
     opacity: 0;
-    transition: all 0.5s;
+    transition: 0.5s;
     font-size: 14px;
 }
 
@@ -279,24 +266,19 @@ h3 {
     color: #ff004f;
     font-size: 18px;
     margin-top: 20px;
-    display: inline-block;
-    line-height: 60px;
     background: #fff;
     width: 60px;
+    height: 60px;
     border-radius: 50%;
     text-align: center;
+    line-height: 60px;
+    display: inline-block;
 }
 
 .work:hover img {
     transform: scale(1.1);
 }
 
-/* ✅ Fixed height value and removed incorrect selector */
-.work:hover .LAYER {
-    height: 100%;
-}
-
-/* Optional: Button styling for "See More" or links */
 .btn {
     display: block;
     margin: 50px auto;
@@ -313,72 +295,94 @@ h3 {
     background: #ff004f;
     color: #fff;
 }
-/*-----------------contact-----------------------------*/
-.contact-left
-{
+
+/* Contact */
+#contact {
+    padding: 80px 0;
+}
+
+.contact-left {
     flex-basis: 35%;
 }
-.contact-right
-{
+
+.contact-right {
     flex-basis: 60%;
 }
-.contact-left p
-{
-    margin-top: 30px ;
+
+.contact-left p {
+    margin-top: 30px;
 }
-.contact-left p i
-{
+
+.contact-left p i {
     color: #ff004f;
     margin-right: 15px;
     font-size: 25px;
-
 }
-.social-icons
-{
+
+.social-icons {
     margin-top: 30px;
-
 }
-.social-icons a{
+
+.social-icons a {
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
     color: #ababab;
     display: inline-block;
-    transition: transform 0.5px;
+    transition: transform 0.3s;
 }
-.social-icons a:hover
-{
+
+.social-icons a:hover {
     color: #ff004f;
-    transform: translate(-5px);
-
+    transform: translateY(-5px);
 }
-,btn.btn2{
+
+.btn2 {
     display: inline-block;
-    bsckground: #ff004f;
+    background: #ff004f;
+    padding: 10px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 20px;
 }
 
+.contact-right form {
+    width: 100%;
+}
 
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 16px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #aaa;
+}
+#Message{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Responsive Design */
 @media (max-width: 768px) {
     .header-text {
         margin-top: 40%;
